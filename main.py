@@ -12,6 +12,7 @@ def main():
     title = " BOOKBOT "
     wc = " Word Count "
     cc = " Character Count "
+    end = " END "
     file = get_book_text(path)
     num_words = get_words(file)
     num_chars = char_count(file)
@@ -21,7 +22,10 @@ def main():
     print (wc.center(34, '-'))
     print (f"Found {num_words} total words")
     print (cc.center(34, '-'))
-    print (sorted)
+    for item in sorted:
+        if item['Character'].isalpha():
+            print(f"{item['Character']}: {item['Count']}")
+    print (end.center(34, '='))
     
 
 main()
