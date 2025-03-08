@@ -1,3 +1,4 @@
+#Define stat functions for main
 def get_words(string):
     words = []
     words = string.split()

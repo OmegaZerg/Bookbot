@@ -1,20 +1,21 @@
+#Import requirements
 import sys
 from stats import get_words, char_count, char_sort
 
+#Exit program is a path is not supplied, and print directions
 if len(sys.argv) < 2:
     print ("Usage: python3 main.py <path_to_book>")
     sys.exit(1)
 
+#Open file path based on input provided
 def get_book_text(file_path):
     with open(file_path) as f:
         file_contents = f.read()
     return file_contents
 
-
-
+#Bookbot
 def main():
     path = sys.argv[1]
-    #path = "books/frankenstein.txt"
     title = " BOOKBOT "
     wc = " Word Count "
     cc = " Character Count "
