@@ -8,7 +8,7 @@ def char_count(string):
     for char in string:
         if char.lower() in characters:
             characters[char.lower()] +=1
-        elif char not in characters:
+        elif char.lower() not in characters:
             characters[char.lower()] = 1
     return characters
 
@@ -19,8 +19,6 @@ def char_sort(dictionary):
     list = []
     for pair in dictionary:
         dic = {'Character': pair, 'Count': dictionary[pair]}
-        #dic['Character'] = pair
-        #dic['Count'] = dictionary[pair]
         list.append(dic)
         list.sort(reverse=True, key=sort_on)
     return list

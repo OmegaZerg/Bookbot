@@ -1,4 +1,9 @@
+import sys
 from stats import get_words, char_count, char_sort
+
+if len(sys.argv) < 2:
+    print ("Usage: python3 main.py <path_to_book>")
+    sys.exit(1)
 
 def get_book_text(file_path):
     with open(file_path) as f:
@@ -8,7 +13,8 @@ def get_book_text(file_path):
 
 
 def main():
-    path = "books/frankenstein.txt"
+    path = sys.argv[1]
+    #path = "books/frankenstein.txt"
     title = " BOOKBOT "
     wc = " Word Count "
     cc = " Character Count "
