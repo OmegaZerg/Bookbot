@@ -1,2 +1,3 @@
 #Ignore Directories
 books/*
+__pycache__/*
